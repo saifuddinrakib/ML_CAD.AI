@@ -2,8 +2,7 @@ import pyautogui
 import pygetwindow
 
 titles = pygetwindow.getAllTitles()
-print(titles)
-
+print(titles)  # Check the output and find the title of the Chrome window you want to track
 
 import keyboard
 import matplotlib.pyplot as plt
@@ -16,6 +15,19 @@ window = pygetwindow.getWindowsWithTitle('Window Title')[0]
 
 # Activate the window
 window.activate()
+
+while True:
+    if not window.isActive:
+        break
+    keys = keyboard.record(until='enter')
+    words = []
+    for key in keys:
+        words.append(key.name)
+    words.append('\n')
+    with open('words.txt', 'a') as file:
+        file.writelines(words)
+
+
 
 # Start recording the keys that are typed in the window
 keyboard.start_recording()
