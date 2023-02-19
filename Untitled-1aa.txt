@@ -1,0 +1,42 @@
+class Shirt:
+    def __init__(self, color, size, style, price):
+        self.color = color
+        self.size = size
+        self.style = style
+        self.price = price
+        
+    def change_price(self, price):
+        self.price = price
+        
+    def discount(self, discount_percent):
+        return self.price * (1 - discount_percent)
+
+# Instantiating shirt_one object
+shirt_one = Shirt("red", "S", "long-sleeve", 25)
+
+# Printing the price of the shirt using the price attribute
+print(shirt_one.price)
+
+# Changing the price of the shirt to 10
+shirt_one.change_price(10)
+
+# Printing the price of the shirt after changing
+print(shirt_one.price)
+
+# Printing the price of the shirt with 12% discount
+print(shirt_one.discount(0.12))
+
+# Instantiating shirt_two object
+shirt_two = Shirt("orange", "L", "short-sleeve", 10)
+
+# Calculating the total cost of shirt_one and shirt_two
+total = shirt_one.price + shirt_two.price
+
+# Printing the total cost
+print(total)
+
+# Calculating the total cost if shirt_one has a discount of 14% and shirt_two has a discount of 6%
+total_discounted = shirt_one.discount(0.14) + shirt_two.discount(0.06)
+
+# Printing the total discounted cost
+print(total_discounted)

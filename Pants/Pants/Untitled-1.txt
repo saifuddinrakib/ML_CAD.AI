@@ -1,0 +1,25 @@
+class Pants:
+    def __init__(self, color, waist_size, length, price):
+        self.color = color
+        self.waist_size = waist_size
+        self.length = length
+        self.price = price
+
+    def change_price(self, new_price):
+        self.price = new_price
+
+    def discount(self, discount):
+        return self.price * (1 - discount)
+
+class SalesPerson:
+    def __init__(self, first_name, last_name, employee_id, salary):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.employee_id = employee_id
+        self.salary = salary
+        self.pants_sold = []
+        self.total_sales = 0
+
+    def sell_pants(self, pants):
+        self.pants_sold.append(pants)
+        self.total_sales += pants.price

@@ -1,0 +1,2 @@
+"""For this script, we need the matplotlib, keyboard, and pygetwindow libraries."""
+"""Additionally, we need the mplot3d toolkit from Matplotlib to create the 3D plot. You can install these libraries using pip."""
