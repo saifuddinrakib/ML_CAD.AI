@@ -11,7 +11,8 @@ from mpl_toolkits.mplot3d import Axes3D
 import datetime
 
 # Get the handle to the window you want to track
-window = pygetwindow.getWindowsWithTitle('Window Title')[0]
+# Get the handle to the window you want to track
+window = pygetwindow.getWindowsWithTitle('Google - Chrome')[0]
 
 # Activate the window
 window.activate()
